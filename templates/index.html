@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <title>Flask Weather</title>
+</head>
+<body>
+    
+    <div class = "container">   
+        <form action="/", method="post">
+            <h1 class = 'title'>Flask Weather</h1>
+            <input type="text" class = 'input' name="city" placeholder="Search..." />
+            <button type="submit", class="myButton">Search</button>
+            <table class="steelBlueCols">
+                <thead>
+                <tr>
+                <th>Country</th>
+                <th>City</th>
+                <th>Clouds</th>
+                <th>Temp</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>{{country}}</td><td>{{name_city}}</td><td>{{clouds}}</td><td>{{main_temp}}</td></tr>
+                </tbody>
+                </tr>
+                </table>
+        </form>
+        
+    </div>
+</body>
+</html>
